@@ -1,0 +1,67 @@
+        -:    0:Source:C:/Users/04024/CLionProjects/PSS_as/Users/lab_employees.cpp
+        -:    0:Graph:C:\Users\04024\CLionProjects\PSS_as\cmake-build-debug-coverage\CMakeFiles\PSS_as.dir\Users\lab_employees.cpp.gcno
+        -:    0:Data:C:\Users\04024\CLionProjects\PSS_as\cmake-build-debug-coverage\CMakeFiles\PSS_as.dir\Users\lab_employees.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by 04024 on 05.03.2021.
+        -:    3://
+        -:    4:
+        -:    5:#include "lab_employees.h"
+        -:    6:#include <cstdlib>
+        -:    7:#include <iostream>
+        -:    8:
+        -:    9:using namespace std;
+        -:   10:
+    #####:   11:lab_employees::~lab_employees(){
+    #####:   12:    free(this->name);
+    %%%%%:   12-block  0
+    #####:   13:    free(this->surname);
+    #####:   14:    free(this->subject);
+    #####:   15:    free(this->groups);
+    #####:   16:}
+    #####:   17:char* lab_employees::getSubject(){
+    #####:   18:    return this->subject;
+    %%%%%:   18-block  0
+        -:   19:}
+    #####:   20:void lab_employees::getGroups(){
+        -:   21:
+    #####:   22:    cout<<"\n\tNumber of Groups : "<<this->num_groups;
+    %%%%%:   22-block  0
+    #####:   23:    cout<<"\n\t Groups : ";
+    #####:   24:    for(int i=0;i<this->num_groups;i++){
+    %%%%%:   24-block  0
+    %%%%%:   24-block  1
+    #####:   25:        cout<<this->groups[i];
+    %%%%%:   25-block  0
+    #####:   26:        if(i+1 != this->num_groups){
+    #####:   27:            cout<<", ";
+    %%%%%:   27-block  0
+        -:   28:        }
+        -:   29:    }
+        -:   30:
+        -:   31:
+    #####:   32:}
+    #####:   33:void lab_employees::setGroups(int* newGroups,int num_groups){
+    #####:   34:    this->num_groups = num_groups;
+    #####:   35:    this->groups = newGroups;
+    #####:   36:}
+    #####:   37:void lab_employees::print(){
+    #####:   38:    cout<<"Student : \n\tName : "<<getName()
+    #####:   39:        <<"\n\tSurname : "<<getSurname()
+    #####:   40:        <<"\n\tID : "<<getId()
+    %%%%%:   40-block  0
+    #####:   41:        <<"\n\tAge : "<<getAge()
+    #####:   42:        <<"\n\tGender : ";
+    #####:   43:    if(getGender()){
+    #####:   44:        cout<<"Male";
+    %%%%%:   44-block  0
+        -:   45:    }else{
+    #####:   46:        cout<<"Female";
+    %%%%%:   46-block  0
+        -:   47:    }
+    #####:   48:    cout<<"\n\tSubject : "<<getSubject();
+    %%%%%:   48-block  0
+    #####:   49:    getGroups();
+    #####:   50:    cout<<"\n\tAccess Level : "<<AccessLevel(this->access_level);
+    #####:   51:    cout<<endl;
+    #####:   52:}

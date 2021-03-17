@@ -1,0 +1,50 @@
+        -:    0:Source:C:/Users/04024/CLionProjects/PSS_as/Users/Professor.cpp
+        -:    0:Graph:C:\Users\04024\CLionProjects\PSS_as\cmake-build-debug-coverage\CMakeFiles\PSS_as.dir\Users\Professor.cpp.gcno
+        -:    0:Data:C:\Users\04024\CLionProjects\PSS_as\cmake-build-debug-coverage\CMakeFiles\PSS_as.dir\Users\Professor.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by 04024 on 05.03.2021.
+        -:    3://
+        -:    4:
+        -:    5:#include <cstdlib>
+        -:    6:#include <iostream>
+        -:    7:#include "Professor.h"
+        -:    8:
+        -:    9:using namespace std;
+    #####:   10:Professor::~Professor(){
+    #####:   11:    free(this->name);
+    %%%%%:   11-block  0
+    #####:   12:    free(this->surname);
+    #####:   13:    free(this->subject);
+    #####:   14:}
+    #####:   15:char* Professor::getSubject(){
+    #####:   16:    return this->subject;
+    %%%%%:   16-block  0
+        -:   17:}
+    #####:   18:void Professor::print(){
+    #####:   19:    cout<<"Student : \n\tName : "<<getName()
+    #####:   20:        <<"\n\tSurname : "<<getSurname()
+    #####:   21:        <<"\n\tID : "<<getId()
+    %%%%%:   21-block  0
+    #####:   22:        <<"\n\tAge : "<<getAge()
+    #####:   23:        <<"\n\tGender : ";
+    #####:   24:    if(getGender()){
+    #####:   25:        cout<<"Male";
+    %%%%%:   25-block  0
+        -:   26:    }else{
+    #####:   27:        cout<<"Female";
+    %%%%%:   27-block  0
+        -:   28:    }
+    #####:   29:    if(getGender()){
+    %%%%%:   29-block  0
+    #####:   30:        cout<<"Male";
+    %%%%%:   30-block  0
+        -:   31:    }else{
+    #####:   32:        cout<<"Female";
+    %%%%%:   32-block  0
+        -:   33:    }
+    #####:   34:    cout<<"\n\tSubject : "<<getSubject();
+    %%%%%:   34-block  0
+    #####:   35:    cout<<"\n\tAccess Level : "<<AccessLevel(this->access_level);
+    #####:   36:    cout<<endl;
+    #####:   37:}

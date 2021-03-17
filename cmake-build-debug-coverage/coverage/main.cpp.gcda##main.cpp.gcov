@@ -1,0 +1,685 @@
+        -:    0:Source:C:/Users/04024/CLionProjects/PSS_as/main.cpp
+        -:    0:Graph:C:\Users\04024\CLionProjects\PSS_as\cmake-build-debug-coverage\CMakeFiles\PSS_as.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\04024\CLionProjects\PSS_as\cmake-build-debug-coverage\CMakeFiles\PSS_as.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Source is newer than graph
+        -:    1:#include <iostream>
+        -:    2:#include "Room.h"
+        -:    3:#include "Users/Person.h"
+        -:    4:#include "Users/Admin.h"
+        -:    5:#include "Users/Professor.h"
+        -:    6:#include "Users/lab_employees.h"
+        -:    7:#include "Users/Student.h"
+        -:    8:#include "University.h"
+        -:    9:using namespace std;
+        -:   10:
+        -:   11:Admin* root = nullptr;
+        1:   12:void init_step(){
+        1:   13:    char* name = (char*)"Admin";
+        1:   14:    char* surname = (char*)"Admin";
+        1:   15:    char* pass1 = (char*)"toor";
+        1:   16:    Person* first_person = new Person(true,name,surname,20);
+        1:   16-block  0
+    $$$$$:   16-block  1
+        1:   17:    Admin* first_admin = new Admin(first_person,pass1);
+        1:   17-block  0
+    $$$$$:   17-block  1
+        1:   18:    first_admin->addNewPerson(first_admin);
+        1:   18-block  0
+        -:   19:
+        1:   20:}
+    #####:   21:void GetAdmin(){
+    #####:   22:    string name,surname;
+    %%%%%:   22-block  0
+    %%%%%:   22-block  1
+    $$$$$:   22-block  2
+    $$$$$:   22-block  3
+    #####:   23:    cout<<"Name : \n";
+    #####:   24:    cin>>name;
+    %%%%%:   24-block  0
+    #####:   25:    cout<<"Surname : \n";
+    %%%%%:   25-block  0
+    #####:   26:    cin>>surname;
+    %%%%%:   26-block  0
+    #####:   27:    bool tor = true;
+    #####:   28:    for(int i=0;i<Admin::Innopolis->persons_len;i++){
+    %%%%%:   28-block  0
+    %%%%%:   28-block  1
+    %%%%%:   28-block  2
+    #####:   29:        if(Admin::Innopolis->persons[i].getName() == name
+    %%%%%:   29-block  0
+    #####:   30:           && Admin::Innopolis->persons[i].getSurname() == surname) {
+    %%%%%:   30-block  0
+    %%%%%:   30-block  1
+    %%%%%:   30-block  2
+    %%%%%:   30-block  3
+        -:   31:
+    #####:   32:            tor = false;
+    #####:   33:            ((Admin *)&(Admin::Innopolis->persons[i]))->print();
+    %%%%%:   33-block  0
+    #####:   34:            break;
+    %%%%%:   34-block  0
+        -:   35:        }
+        -:   36:    }
+    #####:   37:    if(tor){
+    %%%%%:   37-block  0
+    #####:   38:        cout<<"Not in system\n";
+    %%%%%:   38-block  0
+        -:   39:    }
+    #####:   40:}
+    #####:   41:void Login(){
+    #####:   42:    string login, password;
+    %%%%%:   42-block  0
+    %%%%%:   42-block  1
+    $$$$$:   42-block  2
+    $$$$$:   42-block  3
+    #####:   43:    cout << "Name : \n";
+    #####:   44:    cin >> login;
+    %%%%%:   44-block  0
+    #####:   45:    cout << "Password : \n";
+    %%%%%:   45-block  0
+    #####:   46:    cin >> password;
+    %%%%%:   46-block  0
+    #####:   47:    bool tor = false;
+    #####:   48:    for(int i=0;i<Admin::Innopolis->persons_len;i++){
+    %%%%%:   48-block  0
+    %%%%%:   48-block  1
+    %%%%%:   48-block  2
+    #####:   49:        if(login == (string)(Admin::Innopolis->persons[i].getName())){
+    %%%%%:   49-block  0
+    %%%%%:   49-block  1
+    $$$$$:   49-block  2
+    $$$$$:   49-block  3
+    #####:   50:            if(Admin::Innopolis->persons[i].CheckPassword(&password[0])) {
+    %%%%%:   50-block  0
+    %%%%%:   50-block  1
+    %%%%%:   50-block  2
+    #####:   51:                tor = true;
+    #####:   52:                root = (Admin *)&(Admin::Innopolis->persons[i]);
+    #####:   53:                root->print();
+    %%%%%:   53-block  0
+    #####:   54:                break;
+    %%%%%:   54-block  0
+        -:   55:            }
+        -:   56:        }
+        -:   57:    }
+    #####:   58:    if(tor){
+    %%%%%:   58-block  0
+    #####:   59:        cout<<"You are in\n";
+    %%%%%:   59-block  0
+        -:   60:    }else{
+    #####:   61:        cout<<"Login fail\n";
+    %%%%%:   61-block  0
+        -:   62:    }
+    #####:   63:}
+    #####:   64:void GetStudent(){
+    #####:   65:    string name,surname;
+    %%%%%:   65-block  0
+    %%%%%:   65-block  1
+    $$$$$:   65-block  2
+    $$$$$:   65-block  3
+    #####:   66:    cout<<"Name : \n";
+    #####:   67:    cin>>name;
+    %%%%%:   67-block  0
+    #####:   68:    cout<<"Surname : \n";
+    %%%%%:   68-block  0
+    #####:   69:    cin>>surname;
+    %%%%%:   69-block  0
+    #####:   70:    bool tor = true;
+    #####:   71:    for(int i=0;i<Admin::Innopolis->persons_len;i++){
+    %%%%%:   71-block  0
+    %%%%%:   71-block  1
+    %%%%%:   71-block  2
+    #####:   72:        if(Admin::Innopolis->persons[i].getName() == name
+    %%%%%:   72-block  0
+    #####:   73:           && Admin::Innopolis->persons[i].getSurname() == surname) {
+    %%%%%:   73-block  0
+    %%%%%:   73-block  1
+    %%%%%:   73-block  2
+    %%%%%:   73-block  3
+        -:   74:
+    #####:   75:            tor = false;
+    #####:   76:            ((Student *)&(Admin::Innopolis->persons[i]))->print();
+    %%%%%:   76-block  0
+    #####:   77:            break;
+    %%%%%:   77-block  0
+        -:   78:        }
+        -:   79:    }
+    #####:   80:    if(tor){
+    %%%%%:   80-block  0
+    #####:   81:        cout<<"Not in system\n";
+    %%%%%:   81-block  0
+        -:   82:    }
+    #####:   83:}
+    #####:   84:void GetLabEmployees(){
+    #####:   85:    string name,surname;
+    %%%%%:   85-block  0
+    %%%%%:   85-block  1
+    $$$$$:   85-block  2
+    $$$$$:   85-block  3
+    #####:   86:    cout<<"Name : \n";
+    #####:   87:    cin>>name;
+    %%%%%:   87-block  0
+    #####:   88:    cout<<"Surname : \n";
+    %%%%%:   88-block  0
+    #####:   89:    cin>>surname;
+    %%%%%:   89-block  0
+    #####:   90:    bool tor = true;
+    #####:   91:    for(int i=0;i<Admin::Innopolis->persons_len;i++){
+    %%%%%:   91-block  0
+    %%%%%:   91-block  1
+    %%%%%:   91-block  2
+    #####:   92:        if(Admin::Innopolis->persons[i].getName() == name
+    %%%%%:   92-block  0
+    #####:   93:           && Admin::Innopolis->persons[i].getSurname() == surname) {
+    %%%%%:   93-block  0
+    %%%%%:   93-block  1
+    %%%%%:   93-block  2
+    %%%%%:   93-block  3
+        -:   94:
+    #####:   95:            tor = false;
+    #####:   96:            ((lab_employees *)&(Admin::Innopolis->persons[i]))->print();
+    %%%%%:   96-block  0
+    #####:   97:            break;
+    %%%%%:   97-block  0
+        -:   98:        }
+        -:   99:    }
+    #####:  100:    if(tor){
+    %%%%%:  100-block  0
+    #####:  101:        cout<<"Not in system\n";
+    %%%%%:  101-block  0
+        -:  102:    }
+    #####:  103:}
+    #####:  104:void GetProfessor(){
+    #####:  105:    string name,surname;
+    %%%%%:  105-block  0
+    %%%%%:  105-block  1
+    $$$$$:  105-block  2
+    $$$$$:  105-block  3
+    #####:  106:    cout<<"Name : \n";
+    #####:  107:    cin>>name;
+    %%%%%:  107-block  0
+    #####:  108:    cout<<"Surname : \n";
+    %%%%%:  108-block  0
+    #####:  109:    cin>>surname;
+    %%%%%:  109-block  0
+    #####:  110:    bool tor = true;
+    #####:  111:    for(int i=0;i<Admin::Innopolis->persons_len;i++){
+    %%%%%:  111-block  0
+    %%%%%:  111-block  1
+    %%%%%:  111-block  2
+    #####:  112:        if(Admin::Innopolis->persons[i].getName() == name
+    %%%%%:  112-block  0
+    #####:  113:           && Admin::Innopolis->persons[i].getSurname() == surname) {
+    %%%%%:  113-block  0
+    %%%%%:  113-block  1
+    %%%%%:  113-block  2
+    %%%%%:  113-block  3
+        -:  114:
+    #####:  115:            tor = false;
+    #####:  116:            ((Professor *)&(Admin::Innopolis->persons[i]))->print();
+    %%%%%:  116-block  0
+    #####:  117:            break;
+    %%%%%:  117-block  0
+        -:  118:        }
+        -:  119:    }
+    #####:  120:    if(tor){
+    %%%%%:  120-block  0
+    #####:  121:        cout<<"Not in system\n";
+    %%%%%:  121-block  0
+        -:  122:    }
+    #####:  123:}
+    #####:  124:void AddNewRoom(){
+        -:  125:    char* name;
+    #####:  126:    cout<<"Room Name : \n";
+    %%%%%:  126-block  0
+    #####:  127:    cin>>name;
+    %%%%%:  127-block  0
+        -:  128:    int id;
+    #####:  129:    cout<<"Room number : \n";
+    %%%%%:  129-block  0
+    #####:  130:    cin>>id;
+    %%%%%:  130-block  0
+        -:  131:    int access;
+    #####:  132:    cout<<"Standard Access level for Room : \n";
+    %%%%%:  132-block  0
+    #####:  133:    cin>>access;
+    %%%%%:  133-block  0
+    #####:  134:    root->addNewRoom(new Room(name,id,access));
+    %%%%%:  134-block  0
+    %%%%%:  134-block  1
+    %%%%%:  134-block  2
+    $$$$$:  134-block  3
+    #####:  135:}
+    %%%%%:  135-block  0
+    #####:  136:void AddNewUser(){
+        -:  137:    char* name;
+        -:  138:    char* surname;
+    #####:  139:    string gender,lol,type;
+    %%%%%:  139-block  0
+    $$$$$:  139-block  1
+    $$$$$:  139-block  2
+    $$$$$:  139-block  3
+        -:  140:    int age;
+    #####:  141:    cout<<"Type (Admin, Student, lab_employees, Professor) : \n";
+    #####:  142:    cin>>type;
+    %%%%%:  142-block  0
+        -:  143:
+    #####:  144:    cout<<"Name : \n";
+    %%%%%:  144-block  0
+    #####:  145:    cin>>name;
+    %%%%%:  145-block  0
+    #####:  146:    cout<<"Surname : \n";
+    %%%%%:  146-block  0
+    #####:  147:    cin>>surname;
+    %%%%%:  147-block  0
+    #####:  148:    cout<<"Gender(Male, Female) : \n";
+    %%%%%:  148-block  0
+    #####:  149:    cin>>gender;
+    %%%%%:  149-block  0
+    #####:  150:    cout<<"Age : \n";
+    %%%%%:  150-block  0
+    #####:  151:    cin>>age;
+    %%%%%:  151-block  0
+    #####:  152:    cout<<name<<" "<<surname<<" "<<gender<<" "<<age<<endl;
+    %%%%%:  152-block  0
+    %%%%%:  152-block  1
+    %%%%%:  152-block  2
+    %%%%%:  152-block  3
+    %%%%%:  152-block  4
+    %%%%%:  152-block  5
+    %%%%%:  152-block  6
+    %%%%%:  152-block  7
+    #####:  153:    return;
+    %%%%%:  153-block  0
+        -:  154:    Person* newUser = new Person((bool)(gender=="Male"),name,surname,age);
+        -:  155:    if(type == "Admin"){
+        -:  156:        char* password;
+        -:  157:        cout<<"Password : \n";
+        -:  158:        cin>>password;
+        -:  159:        root->addNewPerson(new Admin(newUser,password));
+        -:  160:    }else if(type == "Student"){
+        -:  161:        int group,year;
+        -:  162:        cout<<"year entered in Inno : \n";
+        -:  163:        cin>>year;
+        -:  164:        cout<<"Group : \n";
+        -:  165:        cin>>group;
+        -:  166:        root->addNewPerson(new Student(newUser,group,year));
+        -:  167:    }else if(type == "lab_employees"){
+        -:  168:        char* subject;
+        -:  169:        cout<<"Subject : \n";
+        -:  170:        cin>>subject;
+        -:  171:        root->addNewPerson(new lab_employees(newUser,subject));
+        -:  172:    }else if(type == "Professor"){
+        -:  173:        char* subject;
+        -:  174:        cout<<"Subject : \n";
+        -:  175:        cin>>subject;
+        -:  176:        root->addNewPerson(new Professor(newUser,subject));
+        -:  177:    }
+        -:  178:}
+    #####:  179:void CanUserEnter(){
+    #####:  180:    string name,surname;
+    %%%%%:  180-block  0
+    $$$$$:  180-block  1
+    $$$$$:  180-block  2
+        -:  181:    int room_id;
+    #####:  182:    cout<<"Name : \n";
+    #####:  183:    cin>>name;
+    %%%%%:  183-block  0
+    #####:  184:    cout<<"Surname : \n";
+    %%%%%:  184-block  0
+    #####:  185:    cin>>surname;
+    %%%%%:  185-block  0
+    #####:  186:    Person *user = nullptr;
+    #####:  187:    bool tor = true;
+    #####:  188:    for(int i=0;i<Admin::Innopolis->persons_len;i++){
+    %%%%%:  188-block  0
+    %%%%%:  188-block  1
+    %%%%%:  188-block  2
+    #####:  189:        if(Admin::Innopolis->persons[i].getName() == name && Admin::Innopolis->persons[i].getSurname() == surname){
+    %%%%%:  189-block  0
+    %%%%%:  189-block  1
+    %%%%%:  189-block  2
+    %%%%%:  189-block  3
+    %%%%%:  189-block  4
+    #####:  190:            tor = false;
+    #####:  191:            user = &Admin::Innopolis->persons[i];
+    #####:  192:            break;
+    %%%%%:  192-block  0
+        -:  193:        }
+        -:  194:    }
+    #####:  195:    if(tor){
+    %%%%%:  195-block  0
+    #####:  196:        cout<<"No such User\n";
+    %%%%%:  196-block  0
+    #####:  197:        return;
+    %%%%%:  197-block  0
+        -:  198:    }
+    #####:  199:    cout<<"Room number : \n";
+    %%%%%:  199-block  0
+    #####:  200:    cin>>room_id;
+    %%%%%:  200-block  0
+    #####:  201:    for(int i=0;i<Admin::Innopolis->rooms_len;i++){
+    %%%%%:  201-block  0
+    %%%%%:  201-block  1
+    %%%%%:  201-block  2
+    #####:  202:        if(Admin::Innopolis->rooms[i].room_id == room_id){
+    %%%%%:  202-block  0
+    #####:  203:            if(Admin::Innopolis->rooms[i].canEnter(*user)){
+    %%%%%:  203-block  0
+    %%%%%:  203-block  1
+    %%%%%:  203-block  2
+    $$$$$:  203-block  3
+    #####:  204:                cout<<"Can Enter\n";
+    %%%%%:  204-block  0
+        -:  205:            }else{
+    #####:  206:                cout<<"Can not Enter\n";
+    %%%%%:  206-block  0
+        -:  207:            }
+    #####:  208:            return;
+    %%%%%:  208-block  0
+        -:  209:        }
+        -:  210:    }
+    #####:  211:    cout<<"No such room\n";
+    %%%%%:  211-block  0
+        -:  212:}
+    #####:  213:void AddSpecialAccess(){
+    #####:  214:    string name,surname;
+    %%%%%:  214-block  0
+    $$$$$:  214-block  1
+    $$$$$:  214-block  2
+        -:  215:    int room_id,user_id;
+    #####:  216:    cout<<"Name : \n";
+    #####:  217:    cin>>name;
+    %%%%%:  217-block  0
+    #####:  218:    cout<<"Surname : \n";
+    %%%%%:  218-block  0
+    #####:  219:    cin>>surname;
+    %%%%%:  219-block  0
+    #####:  220:    bool tor = true;
+    #####:  221:    for(int i=0;i<Admin::Innopolis->persons_len;i++){
+    %%%%%:  221-block  0
+    %%%%%:  221-block  1
+    %%%%%:  221-block  2
+    #####:  222:        if(Admin::Innopolis->persons[i].getName() == name && Admin::Innopolis->persons[i].getSurname() == surname){
+    %%%%%:  222-block  0
+    %%%%%:  222-block  1
+    %%%%%:  222-block  2
+    %%%%%:  222-block  3
+    %%%%%:  222-block  4
+    #####:  223:            tor = false;
+    #####:  224:            user_id = Admin::Innopolis->persons[i].getId();
+    %%%%%:  224-block  0
+    #####:  225:            break;
+        -:  226:        }
+        -:  227:    }
+    #####:  228:    if(tor){
+    %%%%%:  228-block  0
+    #####:  229:        cout<<"No such User\n";
+    %%%%%:  229-block  0
+    #####:  230:        return;
+    %%%%%:  230-block  0
+        -:  231:    }
+    #####:  232:    cout<<"Room number : \n";
+    %%%%%:  232-block  0
+    #####:  233:    cin>>room_id;
+    %%%%%:  233-block  0
+    #####:  234:    for(int i=0;i<Admin::Innopolis->rooms_len;i++){
+    %%%%%:  234-block  0
+    %%%%%:  234-block  1
+    %%%%%:  234-block  2
+    #####:  235:        if(Admin::Innopolis->rooms[i].room_id == room_id){
+    %%%%%:  235-block  0
+    #####:  236:            Admin::Innopolis->rooms[i].addInAccessed(user_id);
+    %%%%%:  236-block  0
+    #####:  237:            cout<<"Added\n";
+    %%%%%:  237-block  0
+    #####:  238:            return;
+    %%%%%:  238-block  0
+        -:  239:        }
+        -:  240:    }
+    #####:  241:    cout<<"No such room\n";
+    %%%%%:  241-block  0
+        -:  242:}
+    #####:  243:void RemoveSpecialAccess(){
+    #####:  244:    string name,surname;
+    %%%%%:  244-block  0
+    $$$$$:  244-block  1
+    $$$$$:  244-block  2
+        -:  245:    int room_id,user_id;
+    #####:  246:    cout<<"Name : \n";
+    #####:  247:    cin>>name;
+    %%%%%:  247-block  0
+    #####:  248:    cout<<"Surname : \n";
+    %%%%%:  248-block  0
+    #####:  249:    cin>>surname;
+    %%%%%:  249-block  0
+    #####:  250:    bool tor = true;
+    #####:  251:    for(int i=0;i<Admin::Innopolis->persons_len;i++){
+    %%%%%:  251-block  0
+    %%%%%:  251-block  1
+    %%%%%:  251-block  2
+    #####:  252:        if(Admin::Innopolis->persons[i].getName() == name && Admin::Innopolis->persons[i].getSurname() == surname){
+    %%%%%:  252-block  0
+    %%%%%:  252-block  1
+    %%%%%:  252-block  2
+    %%%%%:  252-block  3
+    %%%%%:  252-block  4
+    #####:  253:            tor = false;
+    #####:  254:            user_id = Admin::Innopolis->persons[i].getId();
+    %%%%%:  254-block  0
+    #####:  255:            break;
+        -:  256:        }
+        -:  257:    }
+    #####:  258:    if(tor){
+    %%%%%:  258-block  0
+    #####:  259:        cout<<"No such User\n";
+    %%%%%:  259-block  0
+    #####:  260:        return;
+    %%%%%:  260-block  0
+        -:  261:    }
+    #####:  262:    cout<<"Room number : \n";
+    %%%%%:  262-block  0
+    #####:  263:    cin>>room_id;
+    %%%%%:  263-block  0
+    #####:  264:    for(int i=0;i<Admin::Innopolis->rooms_len;i++){
+    %%%%%:  264-block  0
+    %%%%%:  264-block  1
+    %%%%%:  264-block  2
+    #####:  265:        if(Admin::Innopolis->rooms[i].room_id == room_id){
+    %%%%%:  265-block  0
+    #####:  266:            Admin::Innopolis->rooms[i].removeAccess(user_id);
+    %%%%%:  266-block  0
+    #####:  267:            cout<<"Removed\n";
+    %%%%%:  267-block  0
+    #####:  268:            return;
+    %%%%%:  268-block  0
+        -:  269:        }
+        -:  270:    }
+    #####:  271:    cout<<"No such room\n";
+    %%%%%:  271-block  0
+        -:  272:}
+    #####:  273:void ChangeGroupsForLabEmployees(){
+    #####:  274:    string name,surname;
+    %%%%%:  274-block  0
+    $$$$$:  274-block  1
+    $$$$$:  274-block  2
+    #####:  275:    cout<<"Name : \n";
+    #####:  276:    cin>>name;
+    %%%%%:  276-block  0
+    #####:  277:    cout<<"Surname : \n";
+    %%%%%:  277-block  0
+    #####:  278:    cin>>surname;
+    %%%%%:  278-block  0
+    #####:  279:    bool tor = true;
+    #####:  280:    lab_employees* le = nullptr;
+    #####:  281:    for(int i=0;i<Admin::Innopolis->persons_len;i++){
+    %%%%%:  281-block  0
+    %%%%%:  281-block  1
+    %%%%%:  281-block  2
+    #####:  282:        if(Admin::Innopolis->persons[i].getName() == name
+    %%%%%:  282-block  0
+    #####:  283:           && Admin::Innopolis->persons[i].getSurname() == surname) {
+    %%%%%:  283-block  0
+    %%%%%:  283-block  1
+    %%%%%:  283-block  2
+    %%%%%:  283-block  3
+        -:  284:
+    #####:  285:            tor = false;
+    #####:  286:            le = (lab_employees *)&(Admin::Innopolis->persons[i]);
+    #####:  287:            break;
+    %%%%%:  287-block  0
+        -:  288:        }
+        -:  289:    }
+    #####:  290:    if(tor){
+    %%%%%:  290-block  0
+    #####:  291:        cout<<"Not in system\n";
+    %%%%%:  291-block  0
+    #####:  292:        return;
+    %%%%%:  292-block  0
+        -:  293:    }
+        -:  294:    int num_groups;
+    #####:  295:    cout<<"Number of groups : \n";
+    %%%%%:  295-block  0
+    #####:  296:    cin>>num_groups;
+    %%%%%:  296-block  0
+    #####:  297:    int* groups = (int*)malloc(num_groups*sizeof(int));
+    #####:  298:    for(int i=0;i<num_groups;i++){
+    %%%%%:  298-block  0
+    %%%%%:  298-block  1
+    %%%%%:  298-block  2
+    #####:  299:        cout<<"Write group number ("<<i+1<<"): \n";
+    %%%%%:  299-block  0
+    %%%%%:  299-block  1
+    %%%%%:  299-block  2
+    #####:  300:        cin>>groups[i];
+    %%%%%:  300-block  0
+        -:  301:    }
+    #####:  302:    le->setGroups(groups, num_groups);
+    %%%%%:  302-block  0
+        -:  303:}
+    #####:  304:void ChangeGroupForStudent(){
+    #####:  305:    string name,surname;
+    %%%%%:  305-block  0
+    $$$$$:  305-block  1
+    $$$$$:  305-block  2
+    #####:  306:    cout<<"Name : \n";
+    #####:  307:    cin>>name;
+    %%%%%:  307-block  0
+    #####:  308:    cout<<"Surname : \n";
+    %%%%%:  308-block  0
+    #####:  309:    cin>>surname;
+    %%%%%:  309-block  0
+    #####:  310:    bool tor = true;
+    #####:  311:    Student* user = nullptr;
+    #####:  312:    for(int i=0;i<Admin::Innopolis->persons_len;i++){
+    %%%%%:  312-block  0
+    %%%%%:  312-block  1
+    %%%%%:  312-block  2
+    #####:  313:        if(Admin::Innopolis->persons[i].getName() == name
+    %%%%%:  313-block  0
+    #####:  314:           && Admin::Innopolis->persons[i].getSurname() == surname) {
+    %%%%%:  314-block  0
+    %%%%%:  314-block  1
+    %%%%%:  314-block  2
+    %%%%%:  314-block  3
+        -:  315:
+    #####:  316:            tor = false;
+    #####:  317:            user = ((Student *)&(Admin::Innopolis->persons[i]));
+    #####:  318:            break;
+    %%%%%:  318-block  0
+        -:  319:        }
+        -:  320:    }
+    #####:  321:    if(tor){
+    %%%%%:  321-block  0
+    #####:  322:        cout<<"Not in system\n";
+    %%%%%:  322-block  0
+    #####:  323:        return;
+    %%%%%:  323-block  0
+        -:  324:    }
+        -:  325:    int groupNum;
+    #####:  326:    cout<<"Group number: \n";
+    %%%%%:  326-block  0
+    #####:  327:    cin>>groupNum;
+    %%%%%:  327-block  0
+    #####:  328:    user->setGroup(groupNum);
+    %%%%%:  328-block  0
+        -:  329:}
+        1:  330:int main() {
+        1:  331:    init_step();
+        1:  331-block  0
+       2*:  332:    string line = "";
+        1:  332-block  0
+    %%%%%:  332-block  1
+    $$$$$:  332-block  2
+    $$$$$:  332-block  3
+       1*:  333:    while(cin>>line) {
+        1:  333-block  0
+    %%%%%:  333-block  1
+    %%%%%:  333-block  2
+    %%%%%:  333-block  3
+    #####:  334:        if("Logout" == line){
+    %%%%%:  334-block  0
+    #####:  335:            return 0;
+    %%%%%:  335-block  0
+    #####:  336:        }else if("Login" == line){
+    %%%%%:  336-block  0
+    #####:  337:            Login();
+    %%%%%:  337-block  0
+    #####:  338:        }else if(line == "GetStudent"){
+    %%%%%:  338-block  0
+    #####:  339:            GetStudent();
+    %%%%%:  339-block  0
+    #####:  340:        }else if(line == "GetAdmin"){
+    %%%%%:  340-block  0
+    #####:  341:            GetAdmin();
+    %%%%%:  341-block  0
+    #####:  342:        }else if(line == "GetLabEmployees"){
+    %%%%%:  342-block  0
+    #####:  343:            GetLabEmployees();
+    %%%%%:  343-block  0
+    #####:  344:        }else if(line == "GetProfessor"){
+    %%%%%:  344-block  0
+    #####:  345:            GetProfessor();
+    %%%%%:  345-block  0
+    #####:  346:        }else if(line  == "AddNewUser"){
+    %%%%%:  346-block  0
+    #####:  347:            AddNewUser();
+    %%%%%:  347-block  0
+    #####:  348:        }else if(line == "Exit"){
+    %%%%%:  348-block  0
+    #####:  349:            return 0;
+    %%%%%:  349-block  0
+    #####:  350:        }else if(line  == "AddNewRoom"){
+    %%%%%:  350-block  0
+    #####:  351:            AddNewRoom();
+    %%%%%:  351-block  0
+    #####:  352:        }else if(line == "CanUserEnter"){
+    %%%%%:  352-block  0
+    #####:  353:            CanUserEnter();
+    %%%%%:  353-block  0
+    #####:  354:        }else if(line == "AddSpecialAccess"){
+    %%%%%:  354-block  0
+    #####:  355:            AddSpecialAccess();
+    %%%%%:  355-block  0
+    #####:  356:        }else if(line == "RemoveSpecialAccess"){
+    %%%%%:  356-block  0
+    #####:  357:            RemoveSpecialAccess();
+    %%%%%:  357-block  0
+    #####:  358:        }else if(line == "ChangeGroupsForLabEmployees"){
+    %%%%%:  358-block  0
+    #####:  359:            ChangeGroupsForLabEmployees();
+    %%%%%:  359-block  0
+    #####:  360:        }else if(line == "ChangeGroupForStudent"){
+    %%%%%:  360-block  0
+    #####:  361:            ChangeGroupForStudent();
+    %%%%%:  361-block  0
+        -:  362:        }
+        -:  363:
+        -:  364:
+        -:  365:
+        -:  366:    }
+        -:  367:
+    #####:  368:    return 0;
+    %%%%%:  368-block  0
+        -:  369:}

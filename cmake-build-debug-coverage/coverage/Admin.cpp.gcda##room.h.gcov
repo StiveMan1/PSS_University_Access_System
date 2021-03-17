@@ -1,0 +1,67 @@
+        -:    0:Source:c:/users/04024/clionprojects/pss_as/room.h
+        -:    0:Graph:C:\Users\04024\CLionProjects\PSS_as\cmake-build-debug-coverage\CMakeFiles\PSS_as.dir\Users\Admin.cpp.gcno
+        -:    0:Data:C:\Users\04024\CLionProjects\PSS_as\cmake-build-debug-coverage\CMakeFiles\PSS_as.dir\Users\Admin.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by 04024 on 05.03.2021.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef PSS_AS_ROOM_H
+        -:    6:#define PSS_AS_ROOM_H
+        -:    7:
+        -:    8:
+        -:    9:#include "Users/Person.h"
+        -:   10:
+        -:   11:class Room {
+        -:   12:private:
+        -:   13:    char* name;
+        -:   14:    unsigned int standardAccess = 1;
+        -:   15:    int specialAccessedUsers_len = 0,specialAccessedUsers_count=1;
+        -:   16:    unsigned int* specialAccessedUsers = new unsigned int[1];
+        -:   17:    void resizeAccess(){
+        -:   18:        unsigned int* newSpecialAccessedUsers = new unsigned int[specialAccessedUsers_count*2];
+        -:   19:        for(int i=0;i<specialAccessedUsers_count;i++){
+        -:   20:            newSpecialAccessedUsers[i] = specialAccessedUsers[i];
+        -:   21:        }
+        -:   22:        specialAccessedUsers_count<<=1;
+        -:   23:        specialAccessedUsers = newSpecialAccessedUsers;
+        -:   24:    }
+        -:   25:public:
+    #####:   26:    Room(){};
+    %%%%%:   26-block  0
+        -:   27:    Room(char* Name,int Room_id,unsigned int StandardAccess) {
+        -:   28:        this->name = Name;
+        -:   29:        this->standardAccess = StandardAccess;
+        -:   30:        this->room_id = Room_id;
+        -:   31:    }
+        -:   32:    void addInAccessed(unsigned int id){
+        -:   33:        for(int i=0;i<specialAccessedUsers_len;i++){
+        -:   34:            if(specialAccessedUsers[i] == id){
+        -:   35:                return;
+        -:   36:            }
+        -:   37:        }
+        -:   38:        if(specialAccessedUsers_len + 1 == specialAccessedUsers_count){
+        -:   39:            resizeAccess();
+        -:   40:        }
+        -:   41:        specialAccessedUsers[specialAccessedUsers_len] = id;
+        -:   42:        specialAccessedUsers_len++;
+        -:   43:    }
+        -:   44:    void removeAccess(unsigned int id){
+        -:   45:        unsigned int* newSpecialAccessedUsers = new unsigned int[specialAccessedUsers_count];
+        -:   46:        for(int i=0,j = 0;i<specialAccessedUsers_len;i++){
+        -:   47:            if(specialAccessedUsers[i] != id){
+        -:   48:                newSpecialAccessedUsers[i-j] = specialAccessedUsers[i];
+        -:   49:            }else{
+        -:   50:                j++;
+        -:   51:            }
+        -:   52:        }
+        -:   53:        specialAccessedUsers = newSpecialAccessedUsers;
+        -:   54:        specialAccessedUsers_len --;
+        -:   55:    }
+        -:   56:
+        -:   57:    int room_id;
+        -:   58:    bool canEnter(const Person person);
+        -:   59:};
+        -:   60:
+        -:   61:
+        -:   62:#endif //PSS_AS_ROOM_H

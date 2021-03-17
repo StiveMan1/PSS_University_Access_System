@@ -1,0 +1,85 @@
+        -:    0:Source:C:/Users/04024/CLionProjects/PSS_as/Users/Person.h
+        -:    0:Graph:C:\Users\04024\CLionProjects\PSS_as\cmake-build-debug-coverage\CMakeFiles\PSS_as.dir\Room.cpp.gcno
+        -:    0:Data:C:\Users\04024\CLionProjects\PSS_as\cmake-build-debug-coverage\CMakeFiles\PSS_as.dir\Room.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Source is newer than graph
+        -:    1://
+        -:    2:// Created by 04024 on 05.03.2021.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef PSS_AS_PERSON_H
+        -:    6:#define PSS_AS_PERSON_H
+        -:    7:
+        -:    8:
+        -:    9:class Person {
+        -:   10:    static int last_id;
+        -:   11:protected:
+        -:   12:    bool gender = true;
+        -:   13:    unsigned int id = 0,age;
+        -:   14:    unsigned short access_level = 0;
+        -:   15:    char* name;
+        -:   16:    char* surname;
+        -:   17:    //Student's
+        -:   18:    char* course;
+        -:   19:    char* courseLevel;
+        -:   20:    int group, yearEnter;
+        -:   21:    //Professor's
+        -:   22:    char* subject;
+        -:   23:    //Lab employer's
+        -:   24:    int num_groups = 0;
+        -:   25:    int* groups = new int[0]();
+        -:   26:    char* password;
+        -:   27:public:
+        -:   28:
+        -:   29:    Person(bool Gender, char* Name, char* Surname, int Age){
+        -:   30:        this->id = Person::last_id++;
+        -:   31:        this->name = Name;
+        -:   32:        this->surname = Surname;
+        -:   33:        this->gender = Gender;
+        -:   34:        this->age = Age;
+        -:   35:    }
+        -:   36:    Person(){}
+        -:   37:    Person(Person const &person){
+        -:   38:        this->id = person.id;
+        -:   39:        this->name = person.name;
+        -:   40:        this->surname = person.surname;
+        -:   41:        this->gender = person.gender;
+        -:   42:        this->age = person.age;
+        -:   43:    }
+        -:   44:    int getId(){
+        -:   45:        return this->id;
+        -:   46:    }
+        -:   47:    char* getName(){
+        -:   48:        return this->name;
+        -:   49:    }
+        -:   50:    char* getSurname(){
+        -:   51:        return this->surname;
+        -:   52:    }
+        -:   53:    bool getGender(){
+        -:   54:        return this->gender;
+        -:   55:    }
+        -:   56:    int getAge(){
+        -:   57:        return this->age;
+        -:   58:    }
+    #####:   59:    int getAccessLevel(){
+    #####:   60:        return this->access_level;
+    %%%%%:   60-block  0
+        -:   61:    }
+        -:   62:    virtual bool CheckPassword(char* Password);
+        -:   63:
+        -:   64:    static char* AccessLevel(int level){
+        -:   65:        if(level == 1){
+        -:   66:            return (char*)("Gray");
+        -:   67:        }else if(level == 2){
+        -:   68:            return (char*)("Green");
+        -:   69:        }else if(level == 3){
+        -:   70:            return (char*)("Yellow");
+        -:   71:        }else if(level == 4){
+        -:   72:            return (char*)("Red");
+        -:   73:        }
+        -:   74:        return "non-level";
+        -:   75:    }
+        -:   76:};
+        -:   77:
+        -:   78:
+        -:   79:#endif //PSS_AS_PERSON_H

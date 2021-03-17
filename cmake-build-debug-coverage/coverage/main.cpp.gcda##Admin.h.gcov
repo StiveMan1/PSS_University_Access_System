@@ -1,0 +1,109 @@
+        -:    0:Source:C:/Users/04024/CLionProjects/PSS_as/Users/Admin.h
+        -:    0:Graph:C:\Users\04024\CLionProjects\PSS_as\cmake-build-debug-coverage\CMakeFiles\PSS_as.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\04024\CLionProjects\PSS_as\cmake-build-debug-coverage\CMakeFiles\PSS_as.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by 04024 on 05.03.2021.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef PSS_AS_ADMIN_H
+        -:    6:#define PSS_AS_ADMIN_H
+        -:    7:
+        -:    8:
+        -:    9:#include "Person.h"
+        -:   10:#include "../Room.h"
+        -:   11:#include "../University.cpp"
+        -:   12:
+        -:   13:class Admin :public Person{
+        -:   14:private:
+        1:   15:    void resizePersons(){
+       3*:   16:        Person* resizesPersonList = new Person[Innopolis->persons_count*2];
+        1:   16-block  0
+        1:   16-block  1
+    %%%%%:   16-block  2
+        1:   16-block  3
+        3:   16-block  4
+        2:   16-block  5
+        2:   16-block  6
+    $$$$$:   16-block  7
+        2:   17:        for(int i=0;i<Innopolis->persons_count;i++){
+        1:   17-block  0
+        2:   17-block  1
+        1:   18:            resizesPersonList[i] = Innopolis->persons[i];
+        1:   18-block  0
+        -:   19:        }
+        1:   20:        Innopolis->persons_count<<=1;
+        1:   21:        Innopolis->persons = resizesPersonList;
+        1:   22:    }
+        1:   22-block  0
+    #####:   23:    void resizeRooms(){
+    #####:   24:        Room* resizesRoomList = new Room[Innopolis->rooms_count*2];
+    %%%%%:   24-block  0
+    %%%%%:   24-block  1
+    %%%%%:   24-block  2
+    %%%%%:   24-block  3
+    %%%%%:   24-block  4
+    %%%%%:   24-block  5
+    %%%%%:   24-block  6
+    $$$$$:   24-block  7
+    #####:   25:        for(int i=0;i<Innopolis->rooms_count;i++){
+    %%%%%:   25-block  0
+    %%%%%:   25-block  1
+    #####:   26:            resizesRoomList[i] = Innopolis->rooms[i];
+    %%%%%:   26-block  0
+        -:   27:        }
+    #####:   28:        Innopolis->rooms_count<<=1;
+    #####:   29:        Innopolis->rooms = resizesRoomList;
+    #####:   30:    }
+    %%%%%:   30-block  0
+        -:   31:
+        -:   32:public:
+        -:   33:    static University *Innopolis;
+        1:   34:    void addNewPerson(Person* person){
+        1:   35:        if(Innopolis->persons_count == Innopolis->persons_len+1){
+        1:   35-block  0
+        1:   36:            resizePersons();
+        1:   36-block  0
+        -:   37:        }
+        1:   38:        Innopolis->persons[Innopolis->persons_len] = *person;
+        1:   38-block  0
+        1:   39:        Innopolis->persons_len ++;
+        1:   40:    }
+    #####:   41:    void addNewRoom(Room* room){
+    #####:   42:        if(Innopolis->rooms_count == Innopolis->rooms_len+1){
+    %%%%%:   42-block  0
+    #####:   43:            resizeRooms();
+    %%%%%:   43-block  0
+        -:   44:        }
+    #####:   45:        Innopolis->rooms[Innopolis->rooms_len] = *room;
+    #####:   46:        Innopolis->rooms_len ++;
+    #####:   47:    }
+        -:   48:
+        1:   49:    Admin(Person* person, char* Password){
+        1:   49-block  0
+        1:   50:        this->id = person->getId();
+        1:   51:        this->name = person->getName();
+        1:   52:        this->surname = person->getSurname();
+        1:   53:        this->gender = person->getGender();
+        1:   54:        this->age = person->getAge();
+        1:   55:        this->password = Password;
+        1:   56:        this->access_level = 4;
+        1:   57:    }
+        -:   58:    Admin(Admin const &admin){
+        -:   59:        this->id = admin.id;
+        -:   60:        this->name = admin.name;
+        -:   61:        this->surname = admin.surname;
+        -:   62:        this->age = admin.age;
+        -:   63:        this->password = admin.password;
+        -:   64:        this->access_level = admin.access_level;
+        -:   65:    }
+        -:   66:    Admin(){}
+        -:   67:    ~Admin();
+        -:   68:
+        -:   69:    void print();
+        -:   70:
+        -:   71:
+        -:   72:};
+        -:   73:
+        -:   74:
+        -:   75:#endif //PSS_AS_ADMIN_H

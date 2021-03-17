@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="PSS_as"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PSS_as">
+				<Option output="C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/PSS_as.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 PSS_as"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PSS_as/fast">
+				<Option output="C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/PSS_as.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 PSS_as/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Room.cpp">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Room.h">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/University.cpp">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/University.h">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/Admin.cpp">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/Admin.h">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/Person.cpp">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/Person.h">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/Professor.cpp">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/Professor.h">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/Student.cpp">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/Student.h">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/lab_employees.cpp">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/lab_employees.h">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/main.cpp">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

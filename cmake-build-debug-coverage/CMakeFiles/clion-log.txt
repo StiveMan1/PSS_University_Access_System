@@ -1,0 +1,4 @@
+C:\Users\04024\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS=--coverage -DCMAKE_C_FLAGS=--coverage -G "CodeBlocks - MinGW Makefiles" C:\Users\04024\CLionProjects\PSS_as
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage

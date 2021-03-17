@@ -1,0 +1,3 @@
+C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug/CMakeFiles/PSS_as.dir
+C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug/CMakeFiles/rebuild_cache.dir
