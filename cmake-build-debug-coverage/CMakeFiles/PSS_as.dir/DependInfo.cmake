@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/04024/CLionProjects/PSS_as/Room.cpp" "C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/CMakeFiles/PSS_as.dir/Room.cpp.obj"
   "C:/Users/04024/CLionProjects/PSS_as/University.cpp" "C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/CMakeFiles/PSS_as.dir/University.cpp.obj"
   "C:/Users/04024/CLionProjects/PSS_as/Users/Admin.cpp" "C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/CMakeFiles/PSS_as.dir/Users/Admin.cpp.obj"
+  "C:/Users/04024/CLionProjects/PSS_as/Users/Guest.cpp" "C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/CMakeFiles/PSS_as.dir/Users/Guest.cpp.obj"
   "C:/Users/04024/CLionProjects/PSS_as/Users/Person.cpp" "C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/CMakeFiles/PSS_as.dir/Users/Person.cpp.obj"
   "C:/Users/04024/CLionProjects/PSS_as/Users/Professor.cpp" "C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/CMakeFiles/PSS_as.dir/Users/Professor.cpp.obj"
   "C:/Users/04024/CLionProjects/PSS_as/Users/Student.cpp" "C:/Users/04024/CLionProjects/PSS_as/cmake-build-debug-coverage/CMakeFiles/PSS_as.dir/Users/Student.cpp.obj"

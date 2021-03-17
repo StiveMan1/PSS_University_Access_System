@@ -223,6 +223,33 @@ Users/Admin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PSS_as.dir\build.make CMakeFiles/PSS_as.dir/Users/Admin.cpp.s
 .PHONY : Users/Admin.cpp.s
 
+Users/Guest.obj: Users/Guest.cpp.obj
+
+.PHONY : Users/Guest.obj
+
+# target to build an object file
+Users/Guest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PSS_as.dir\build.make CMakeFiles/PSS_as.dir/Users/Guest.cpp.obj
+.PHONY : Users/Guest.cpp.obj
+
+Users/Guest.i: Users/Guest.cpp.i
+
+.PHONY : Users/Guest.i
+
+# target to preprocess a source file
+Users/Guest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PSS_as.dir\build.make CMakeFiles/PSS_as.dir/Users/Guest.cpp.i
+.PHONY : Users/Guest.cpp.i
+
+Users/Guest.s: Users/Guest.cpp.s
+
+.PHONY : Users/Guest.s
+
+# target to generate assembly for a file
+Users/Guest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PSS_as.dir\build.make CMakeFiles/PSS_as.dir/Users/Guest.cpp.s
+.PHONY : Users/Guest.cpp.s
+
 Users/Person.obj: Users/Person.cpp.obj
 
 .PHONY : Users/Person.obj
@@ -376,6 +403,9 @@ help:
 	@echo ... Users/Admin.obj
 	@echo ... Users/Admin.i
 	@echo ... Users/Admin.s
+	@echo ... Users/Guest.obj
+	@echo ... Users/Guest.i
+	@echo ... Users/Guest.s
 	@echo ... Users/Person.obj
 	@echo ... Users/Person.i
 	@echo ... Users/Person.s

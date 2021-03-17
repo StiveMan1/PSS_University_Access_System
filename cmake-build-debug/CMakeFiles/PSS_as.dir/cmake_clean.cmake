@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/PSS_as.dir/Room.cpp.obj"
   "CMakeFiles/PSS_as.dir/University.cpp.obj"
   "CMakeFiles/PSS_as.dir/Users/Admin.cpp.obj"
+  "CMakeFiles/PSS_as.dir/Users/Guest.cpp.obj"
   "CMakeFiles/PSS_as.dir/Users/Person.cpp.obj"
   "CMakeFiles/PSS_as.dir/Users/Professor.cpp.obj"
   "CMakeFiles/PSS_as.dir/Users/Student.cpp.obj"

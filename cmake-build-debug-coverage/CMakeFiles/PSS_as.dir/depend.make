@@ -17,6 +17,10 @@ CMakeFiles/PSS_as.dir/Users/Admin.cpp.obj: ../Users/Admin.cpp
 CMakeFiles/PSS_as.dir/Users/Admin.cpp.obj: ../Users/Admin.h
 CMakeFiles/PSS_as.dir/Users/Admin.cpp.obj: ../Users/Person.h
 
+CMakeFiles/PSS_as.dir/Users/Guest.cpp.obj: ../Users/Guest.cpp
+CMakeFiles/PSS_as.dir/Users/Guest.cpp.obj: ../Users/Guest.h
+CMakeFiles/PSS_as.dir/Users/Guest.cpp.obj: ../Users/Person.h
+
 CMakeFiles/PSS_as.dir/Users/Person.cpp.obj: ../Users/Person.cpp
 CMakeFiles/PSS_as.dir/Users/Person.cpp.obj: ../Users/Person.h
 
@@ -36,6 +40,7 @@ CMakeFiles/PSS_as.dir/main.cpp.obj: ../Room.h
 CMakeFiles/PSS_as.dir/main.cpp.obj: ../University.cpp
 CMakeFiles/PSS_as.dir/main.cpp.obj: ../University.h
 CMakeFiles/PSS_as.dir/main.cpp.obj: ../Users/Admin.h
+CMakeFiles/PSS_as.dir/main.cpp.obj: ../Users/Guest.h
 CMakeFiles/PSS_as.dir/main.cpp.obj: ../Users/Person.h
 CMakeFiles/PSS_as.dir/main.cpp.obj: ../Users/Professor.h
 CMakeFiles/PSS_as.dir/main.cpp.obj: ../Users/Student.h
