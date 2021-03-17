@@ -8,7 +8,6 @@ Login - to login in system (Name : Admin, Password : toor)
 GetStudent - show user by Name and Surname
 GetLabEmployees - show user by Name and Surname
 GetProfessor - show user by Name and Surname
-GetGuest - show user by Name and Surname - new
 GetLabEmployeer - show user by Name and Surname
 GetAdmin - show user by Name and Surname
 
@@ -31,6 +30,3 @@ RemoveSpecialAccess - removing users from this list.
 # Changing Groups 
 ChangeGroupsForLabEmployees - sends a list of groups in which this assistant will conduct labs.
 ChangeGroupForStudent - change group with which student will study.
-
-# Deleting User from system
-DeleteUser - deleting user by name and surname - new.
