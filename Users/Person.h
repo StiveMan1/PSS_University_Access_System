@@ -32,7 +32,9 @@ public:
         this->surname = Surname;
         this->gender = Gender;
         this->age = Age;
+        this->access_level = 1;
     }
+    ~Person();
     Person(){}
     Person(Person const &person){
         this->id = person.id;
@@ -65,10 +67,12 @@ public:
         if(level == 1){
             return (char*)("Gray");
         }else if(level == 2){
-            return (char*)("Green");
+            return (char*)("Blue");
         }else if(level == 3){
-            return (char*)("Yellow");
+            return (char*)("Green");
         }else if(level == 4){
+            return (char*)("Yellow");
+        }else if(level == 6){
             return (char*)("Red");
         }
         return (char*)"non-level";

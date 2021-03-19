@@ -53,7 +53,7 @@ public:
         this->gender = person->getGender();
         this->age = person->getAge();
         this->password = Password;
-        this->access_level = 4;
+        this->access_level = 5;
     }
     Admin(Admin const &admin){
         this->id = admin.id;

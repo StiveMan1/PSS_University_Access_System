@@ -98,6 +98,12 @@
 		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/Admin.h">
 			<Option target="PSS_as"/>
 		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/Guest.cpp">
+			<Option target="PSS_as"/>
+		</Unit>
+		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/Guest.h">
+			<Option target="PSS_as"/>
+		</Unit>
 		<Unit filename="C:/Users/04024/CLionProjects/PSS_as/Users/Person.cpp">
 			<Option target="PSS_as"/>
 		</Unit>

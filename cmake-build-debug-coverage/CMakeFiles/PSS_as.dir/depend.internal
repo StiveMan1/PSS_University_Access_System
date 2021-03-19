@@ -17,6 +17,10 @@ CMakeFiles/PSS_as.dir/Users/Admin.cpp.obj
  C:/Users/04024/CLionProjects/PSS_as/Users/Admin.cpp
  C:/Users/04024/CLionProjects/PSS_as/Users/Admin.h
  C:/Users/04024/CLionProjects/PSS_as/Users/Person.h
+CMakeFiles/PSS_as.dir/Users/Guest.cpp.obj
+ C:/Users/04024/CLionProjects/PSS_as/Users/Guest.cpp
+ C:/Users/04024/CLionProjects/PSS_as/Users/Guest.h
+ C:/Users/04024/CLionProjects/PSS_as/Users/Person.h
 CMakeFiles/PSS_as.dir/Users/Person.cpp.obj
  C:/Users/04024/CLionProjects/PSS_as/Users/Person.cpp
  C:/Users/04024/CLionProjects/PSS_as/Users/Person.h
@@ -37,6 +41,7 @@ CMakeFiles/PSS_as.dir/main.cpp.obj
  C:/Users/04024/CLionProjects/PSS_as/University.cpp
  C:/Users/04024/CLionProjects/PSS_as/University.h
  C:/Users/04024/CLionProjects/PSS_as/Users/Admin.h
+ C:/Users/04024/CLionProjects/PSS_as/Users/Guest.h
  C:/Users/04024/CLionProjects/PSS_as/Users/Person.h
  C:/Users/04024/CLionProjects/PSS_as/Users/Professor.h
  C:/Users/04024/CLionProjects/PSS_as/Users/Student.h
